@@ -38,8 +38,8 @@ where:
 
 - **Choosing Principal Components**:  
 The singular values in `S` indicate the importance of each component. To retain **maximum variance**, the top `k` components are selected:  
-
-X_reduced = U(:,1:k) * S(1:k,1:k)
+   ```markdown
+      X_reduced = U(:,1:k) * S(1:k,1:k)
 
 where `k` is the optimal number of dimensions chosen based on variance explained.
 
