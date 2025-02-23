@@ -28,7 +28,7 @@ Singular Value Decomposition (SVD) is applied to reduce the dataset’s dimensio
 - **Matrix Factorization**:  
   Given a feature matrix `X`, we decompose it as:
   ```markdown
-X = U * S * Vᵀ
+  X = U * S * Vᵀ
  
 
 where:  
