@@ -23,15 +23,27 @@ This study aims to predict **Chronic Kidney Disease (CKD)** using a **dimensiona
 3. **Handling Missing Values**: Missing values are replaced with the column mean  
 
 ### 🔹 Dimensionality Reduction with SVD  
-- **Computing SVD**:  
+Singular Value Decomposition (SVD) is applied to reduce the dataset’s dimensionality while preserving critical information.  
+
+- **Matrix Factorization**:  
+  Given a feature matrix \( X \), we decompose it as:  
   \[
   X = U S V^T
   \]
-- **Choosing Principal Components**: Selecting the top `k = 5` components to retain maximum variance  
-- **Feature Transformation**:  
+  where:  
+  - \( U \) is an orthogonal matrix representing the left singular vectors  
+  - \( S \) is a diagonal matrix containing singular values  
+  - \( V \) is an orthogonal matrix representing the right singular vectors  
+
+- **Choosing Principal Components**:  
+  The singular values in \( S \) indicate the importance of each component. To retain **maximum variance**, the top \( k \) components are selected:  
   \[
   X_{\text{reduced}} = U(:,1:k) \times S(1:k,1:k)
   \]  
+  where \( k \) is the optimal number of dimensions chosen based on variance explained.
+
+- **Singular Value Plot**:  
+  A plot of singular values helps determine the optimal value of \( k \) by analyzing the **elbow point**.
 
 ### 🔹 Model Training & Evaluation  
 - **Classifier**: Logistic Regression (`fitclinear` in MATLAB)  
@@ -45,7 +57,7 @@ This study aims to predict **Chronic Kidney Disease (CKD)** using a **dimensiona
 
 ## 📊 Results  
 
-- **SVD reduced the dataset’s dimensionality while preserving critical information**  
+- **SVD effectively reduced dataset dimensionality while preserving key information**  
 - **Logistic Regression achieved high accuracy** with optimized computational efficiency  
 - **Visualization of Singular Values & Data Projection**:  
 
@@ -65,16 +77,4 @@ This study aims to predict **Chronic Kidney Disease (CKD)** using a **dimensiona
 3. **Feature Transformation**: SVD-based dimensionality reduction  
 4. **Model Processing**: Logistic Regression  
 5. **Output**: CKD Prediction (`1 = CKD`, `0 = Not CKD`)  
-
-### 📌 Example Prediction:  
-| **Patient ID** | **Age** | **BP (mmHg)** | **Glucose (mg/dL)** | **CKD Prediction** | **Confidence Score** |
-|---------------|------|-------------|----------------|----------------|------------------|
-| 1001 | 55 | 140 | 220 | 1 (CKD) | 92.5% |
-| 1002 | 45 | 130 | 180 | 0 (Not CKD) | 89.3% |
-| 1003 | 65 | 160 | 250 | 1 (CKD) | 95.1% |
-
-📢 _Note: Replace with actual model predictions._
-
----
-
 
