@@ -54,7 +54,6 @@ This study aims to predict **Chronic Kidney Disease (CKD)** using a **dimensiona
 📌 **2D Projection of Data**   
 
 📌 **Confusion Matrix**  
-![Confusion Matrix](https://via.placeholder.com/400)  
 
 ---
 
