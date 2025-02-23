@@ -26,4 +26,14 @@ This study aims to predict **Chronic Kidney Disease (CKD)** using a **dimensiona
 Singular Value Decomposition (SVD) is applied to reduce the dataset’s dimensionality while preserving critical information.  
 
 - **Matrix Factorization**:  
-  Given a feature matrix `X`, we decompose it as:  
+  Given a feature matrix `X`, we decompose it as:
+X = U * S * Vᵀ
+
+where:  
+- `U` is an orthogonal matrix representing the left singular vectors  
+- `S` is a diagonal matrix containing singular values  
+- `V` is an orthogonal matrix representing the right singular vectors  
+
+- **Choosing Principal Components**:  
+The singular values in `S` indicate the importance of each component. To retain **maximum variance**, the top `k` components are selected:  
+
