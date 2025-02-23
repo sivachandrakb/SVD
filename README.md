@@ -50,10 +50,8 @@ This study aims to predict **Chronic Kidney Disease (CKD)** using a **dimensiona
 - **Visualization of Singular Values & Data Projection**:  
 
 📌 **Singular Value Plot**  
-![Singular Value Plot](https://via.placeholder.com/400)  
 
-📌 **2D Projection of Data**  
-![2D Projection](https://via.placeholder.com/400)  
+📌 **2D Projection of Data**   
 
 📌 **Confusion Matrix**  
 ![Confusion Matrix](https://via.placeholder.com/400)  
